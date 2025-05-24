@@ -7,7 +7,8 @@
     "build": "tsc",
     "lint": "eslint . --ext .ts",
     "test": "jest",
-    "format": "prettier --check ."
+    "format": "prettier --check .",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,11 @@
     "prettier": "^3.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "eslint-import-resolver-typescript": "^3.6.1"
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,js}": ["eslint --fix"]
   }
 }
